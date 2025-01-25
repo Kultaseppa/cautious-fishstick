@@ -1,6 +1,6 @@
 # Logbook
 
-30.10.2024, 2h, Kick-off lecture, Lecture recording
+17.01.2024, 1,5h, Kick-off lecture, Lecture recording
 
 | Date       | Used hours | Subject(s)        | Output              |
 |------------|--------------|-------------------|---------------------|
