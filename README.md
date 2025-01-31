@@ -6,3 +6,5 @@
 |------------|--------------|-------------------|---------------------|
 | 17.01.2025 | 1,5          | Kick-off lecture  | Lecture recording   |
 | 23.01.2024 | 2            | Kick-off lecture  | portswigger         |
+| 30.01.2024 | 1            | Homework          | netacad             |
+| 31.01.2024 | 1,5          | Workshop          | netacad             |
