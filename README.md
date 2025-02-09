@@ -9,3 +9,5 @@
 | 30.01.2025 | 1            | Homework          | netacad             |
 | 31.01.2025 | 1,5          | Workshop          | netacad             |
 | 01.02.2025 | 2            | Homework          | netacad             |
+| 09.02.2025 | 3            | Homework          | portswigger         |
+
