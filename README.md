@@ -1,13 +1,11 @@
 # Logbook
 
-17.01.2024, 1,5h, Kick-off lecture, Lecture recording
-
 | Date       | Used hours | Subject(s)        | Output              |
 |------------|--------------|-------------------|---------------------|
-| 17.01.2025 | 1,5          | Kick-off lecture  | Lecture recording   |
-| 23.01.2025 | 2            | Kick-off lecture  | portswigger         |
-| 30.01.2025 | 1            | Homework          | netacad             |
-| 31.01.2025 | 1,5          | Workshop          | netacad             |
-| 01.02.2025 | 2            | Homework          | netacad             |
-| 09.02.2025 | 3            | Homework          | portswigger         |
+|23.10.2025	 |4	Preparing the course|	Updated content
+24.10.2025	 |4	Preparing the course|	Updated tasks
+28.10.2025	 |2	Kick-off lecture	  | Course started
+03.11.2025	 |2	Preparing for the   |lecture	Material updated
+04.11.2025	 |3	Preparing for the lecture |	Material updated
+04.11.2025	 |2	Lecture intro to portswigger |	Lecture recording
 
