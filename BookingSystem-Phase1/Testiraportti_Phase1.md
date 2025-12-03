@@ -23,7 +23,7 @@
 | **Overall risk level** | **Critical** |
 | **Top 5 immediate actions** | 1. **Kiireellinen** korjaus salasanan tallenukseen. |
 | | 2. **Kiireellinen** korjaus ikärajan valvontaan. |
-| | 3. Varmista, että salasanat on **piilotettu**. |
+| | 3. Varmista, että salasanat on **hashattu & suolattu** |
 | | 4. Implementoi vahva roolien ja käyttöoikeuksien tarkistus sovelluslogiikassa. |
 | | 5. Korjaa havaitut tekniset viat (esim. ZAP-raportista). |
 
@@ -61,14 +61,7 @@
 
 ---
 
-### **Ohjeet Kuvien Lisäämiseen Markdowniin:**
 
-1.  **Luo kansio:** Luo kansio nimeltä **`Kuvakaappaukset`** **`BookingSystem-Phase1`**-kansion sisään.
-2.  **Tallenna:** Tallenna kaikki todisteet (PNG/JPG-tiedostoina) tähän kansioon.
-3.  **Linkitä:** Korvaa yllä olevassa taulukossa olevat **`[Kuva: X]`**-kohdat todellisella Markdown-linkillä:
-
-```markdown
-![Kuvan Kuvaus](Kuvakaappaukset/tiedoston_nimi.png)
 
 
 
