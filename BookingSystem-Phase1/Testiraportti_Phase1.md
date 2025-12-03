@@ -44,7 +44,7 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 | :--- | :--- | :--- | :--- | :--- |
-| **F-01** | 🔴 **High** | **Oikeuksien Korotus (Privilege Escalation)** | Käyttäjän rooli on mahdollista muuttaa (`reserver` -> `Admin`) suoraan PostgreSQL-tietokantaan. Sovellus ei estä luvatonta muutosta. | **SQL Komento:** `UPDATE booking_users SET role = 'Admin' WHERE [oikea\_tunniste] = 'seppo@kerava.com';` **Todiste:** [Kuva: Admin-näkymän näyttökuva] |
+| **F-01** | 🔴 **High** | **Oikeuksien Korotus (Privilege Escalation)** | Tietokantatason CHECK constraint esti luvattoman roolin (Admin) asettamisen SQL-päivityksellä, mikä lisäsi suojausta suoria tietokantahyökkäyksiä vastaan | **SQL Komento:** `UPDATE booking_users SET role = 'Admin' WHERE [oikea\_tunniste] = 'jeeveli@123.com';` **Todiste:** (Kuvakaappaukset/Kuva 8.png) |
 | **F-02** | 🔴 **High** | **Ikärajan Valvonnan Ohitus** | Järjestelmä antaa alaikäisen käyttäjän rekisteröityä ja tehdä onnistuneesti resurssivarauksen, rikkoen 15 vuoden ikärajavaatimuksen. | **Todiste:** ![Näyttökuva alle 15-vuotiaan rekisteröinnistä ja varauksesta](Kuvakaappaukset/Kuva 6.png) |
 | **F-03** | 🔴 **High** | **Salasanan Tallennus** | Salasanat tallennetaan tietokantaan **selväkielisenä (Plain Text)**. (Täytä, jos näin oli) | **Todiste:** [Kuva: SELECT \* FROM booking\_users -kyselyn tulos] |
 | **F-04** | 🟠 **Medium** | **SQL-Injektio (Tekninen virhe)** | \[Kuvaa lyhyesti SQLi-testin tulos, jos aiheutti teknisen virheen tai jos salasana ei ollut hashattu.] | \[Linkki tai kuva todisteesta] |
@@ -69,6 +69,7 @@
 
 ```markdown
 ![Kuvan Kuvaus](Kuvakaappaukset/tiedoston_nimi.png)
+
 
 
 
