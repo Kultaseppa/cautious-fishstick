@@ -19,7 +19,7 @@
 
 | Tunniste | Arvo |
 | :--- | :--- |
-| **Short summary** | Järjestelmässä havaittiin kriittisiä puutteita roolienhallinnassa ja liiketoimintalogiikassa, joiden avulla hyökkääjä voi saada ylläpitäjän oikeudet ja ohittaa alaikäisten varauskiellon. |
+| **Short summary** | Järjestelmässä havaittiin kaksi kriittistä tietoturvariskiä: salasanat tallennetaan selväkielisenä (Plain Text), mikä aiheuttaa välittömän tietovuotovaaran, ja ikärajan valvonta on helppo ohittaa liiketoimintalogiikan heikkouden vuoksi. Roolien muuttaminen suoraan tietokannassa oli estetty asianmukaisen CHECK constraint -määrityksen ansiosta. |
 | **Overall risk level** | **Critical** |
 | **Top 5 immediate actions** | 1. **Kiireellinen** korjaus salasanan tallenukseen. |
 | | 2. **Kiireellinen** korjaus ikärajan valvontaan. |
@@ -69,6 +69,7 @@
 
 ```markdown
 ![Kuvan Kuvaus](Kuvakaappaukset/tiedoston_nimi.png)
+
 
 
 
