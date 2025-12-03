@@ -8,21 +8,4 @@
 | **Tool** | OWASP ZAP (Baseline Scan, Manuaalinen Dokumentaatio) |
 | **Highest Risk** | Medium (Puuttuvat suojausotsakkeet) |
 
-***
-
-## 2. Löydökset ja Korjaustoimenpiteet
-
-### 2.1. Puuttuva X-Frame-Options -otsake
-* **Vakavuus:** 🟠 Medium
-* **Kuvaus:** HTTP-otsake **`X-Frame-Options`** puuttuu vastausotsakkeista. Tämä sallii sivuston upottamisen iFrameen, mikä aiheuttaa **Clickjacking-riskin**.
-* **Korjaustoimenpide:** Lisää palvelimen konfiguraatioon otsake **`X-Frame-Options: DENY`** tai **`SAMEORIGIN`**.
-
-### 2.2. Cookie Without HttpOnly Flag
-* **Vakavuus:** 🟠 Medium
-* **Kuvaus:** Järjestelmän istuntokeksit (Cookies) eivät käytä **`HttpOnly`**-lippua. Tämä helpottaa **XSS-hyökkäyksiä**.
-* **Korjaustoimenpide:** Aseta keksien asetus **`HttpOnly`**-tilaan.
-
-### 2.3. Puuttuva X-Content-Type-Options -otsake
-* **Vakavuus:** 🟡 Low
-* **Kuvaus:** HTTP-otsake **`X-Content-Type-Options`** puuttuu. Tämä voi sallia selaimen arvailla sisällön tyypin.
-* **Korjaustoimenpide:** Lisää palvelimen konfiguraatioon otsake **`X-Content-Type-Options: nosniff`**.
+En saa millään toimimaan zap-baseline.py  En tiedä onko uusimmassa python versiossa jokin pielessä. 
