@@ -44,11 +44,11 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 | :--- | :--- | :--- | :--- | :--- |
-| **F-01** | **🟡 Low**  | **Oikeuksien Korotus (Privilege Escalation)** | Tietokantatason CHECK constraint esti luvattoman roolin (Admin) asettamisen SQL-päivityksellä, mikä lisäsi suojausta suoria tietokantahyökkäyksiä vastaan | **Todiste:** (Kuvakaappaukset/Kuva 8.png) |
-| **F-02** | 🔴 **High** | **Ikärajan Valvonnan Ohitus** | Järjestelmä antaa alaikäisen käyttäjän rekisteröityä ja tehdä onnistuneesti resurssivarauksen, rikkoen 15 vuoden ikärajavaatimuksen. | **Todiste:** (Kuvakaappaukset/Kuva 6.png) |
-| **F-03** | 🔴 **High** | **Salasanan Tallennus** | Salasanat tallennetaan tietokantaan **selväkielisenä**.  | **Todiste:** (Kuvakaappaukset/Kuva 2.png) |
-| **F-04** | 🟠 **Medium** | **SQL-Injektio (Tekninen virhe)** | Erikoismerkit rekisteröinnin yhteydessä aiheutti teknisen virheen | (Kuvakaappaukset/Kuva 1.png) |
-| **F-05** | 🔵 **Info** | **XSS-Suodatus (Positiivinen)** | Järjestelmä suodatti onnistuneesti `<` ja `>` -merkit sähköpostikentästä, mikä estää helpot XSS-injektiot. | (Kuvakaappaukset/Kuva 4.png) |
+| **F-01** | **🟡 Low**  | **Oikeuksien Korotus (Privilege Escalation)** | Tietokantatason CHECK constraint esti luvattoman roolin (Admin) asettamisen SQL-päivityksellä, mikä lisäsi suojausta suoria tietokantahyökkäyksiä vastaan | **Todiste:** ![Oikeuksien korotus](Kuvakaappaukset/Kuva 8.png) |
+| **F-02** | 🔴 **High** | **Ikärajan Valvonnan Ohitus** | Järjestelmä antaa alaikäisen käyttäjän rekisteröityä ja tehdä onnistuneesti resurssivarauksen, rikkoen 15 vuoden ikärajavaatimuksen. | **Todiste:** ![Alaikäisen varauksen todiste](Kuvakaappaukset/Kuva 6.png) |
+| **F-03** | 🔴 **High** | **Salasanan Tallennus** | Salasanat tallennetaan tietokantaan **selväkielisenä**.  | **Todiste:** ![Selväkielisen salasanan todiste](Kuvakaappaukset/Kuva 2.png) |
+| **F-04** | 🟠 **Medium** | **SQL-Injektio (Tekninen virhe)** | Erikoismerkit rekisteröinnin yhteydessä aiheutti teknisen virheen | ![SQLi-virheilmoitus](Kuvakaappaukset/Kuva 1.png) |
+| **F-05** | 🔵 **Info** | **XSS-Suodatus (Positiivinen)** | Järjestelmä suodatti onnistuneesti `<` ja `>` -merkit sähköpostikentästä, mikä estää helpot XSS-injektiot. | ![XSS-suodatuksen näyttökuva](Kuvakaappaukset/Kuva 4.png) |
 
 ***
 
@@ -69,6 +69,7 @@
 
 ```markdown
 ![Kuvan Kuvaus](Kuvakaappaukset/tiedoston_nimi.png)
+
 
 
 
