@@ -44,7 +44,7 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 | :--- | :--- | :--- | :--- | :--- |
-| **F-01** | **🟡 Low**  | **Oikeuksien Korotus (Privilege Escalation)** | Tietokantatason CHECK constraint esti luvattoman roolin (Admin) asettamisen SQL-päivityksellä, mikä lisäsi suojausta suoria tietokantahyökkäyksiä vastaan | **SQL Komento:** UPDATE booking_users SET role = 'Admin' WHERE username = 'jeeveli@123.com'; Todiste: (Kuvakaappaukset/Kuva 8.png) |
+| **F-01** | **🟡 Low**  | **Oikeuksien Korotus (Privilege Escalation)** | Tietokantatason CHECK constraint esti luvattoman roolin (Admin) asettamisen SQL-päivityksellä, mikä lisäsi suojausta suoria tietokantahyökkäyksiä vastaan | **Todiste:** (Kuvakaappaukset/Kuva 8.png) |
 | **F-02** | 🔴 **High** | **Ikärajan Valvonnan Ohitus** | Järjestelmä antaa alaikäisen käyttäjän rekisteröityä ja tehdä onnistuneesti resurssivarauksen, rikkoen 15 vuoden ikärajavaatimuksen. | **Todiste:** (Kuvakaappaukset/Kuva 6.png) |
 | **F-03** | 🔴 **High** | **Salasanan Tallennus** | Salasanat tallennetaan tietokantaan **selväkielisenä (Plain Text)**.  | **Todiste:** (Kuvakaappaukset/Kuva 2.png) |
 | **F-04** | 🟠 **Medium** | **SQL-Injektio (Tekninen virhe)** | \[Kuvaa lyhyesti SQLi-testin tulos, jos aiheutti teknisen virheen tai jos salasana ei ollut hashattu.] | \[Linkki tai kuva todisteesta] |
@@ -69,6 +69,7 @@
 
 ```markdown
 ![Kuvan Kuvaus](Kuvakaappaukset/tiedoston_nimi.png)
+
 
 
 
