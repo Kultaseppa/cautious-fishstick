@@ -23,7 +23,7 @@
 | **Overall risk level** | **Critical** |
 | **Top 5 immediate actions** | 1. **Kiireellinen** korjaus oikeuksien korotukseen. |
 | | 2. **Kiireellinen** korjaus ikärajan valvontaan (backend-validointi). |
-| | 3. Varmista, että salasanat on **saltattu ja hashattu**. |
+| | 3. Varmista, että salasanat on **piilotettu**. |
 | | 4. Implementoi vahva roolien ja käyttöoikeuksien tarkistus sovelluslogiikassa. |
 | | 5. Korjaa havaitut tekniset viat (esim. ZAP-raportista). |
 
@@ -69,4 +69,5 @@
 
 ```markdown
 ![Kuvan Kuvaus](Kuvakaappaukset/tiedoston_nimi.png)
+
 
