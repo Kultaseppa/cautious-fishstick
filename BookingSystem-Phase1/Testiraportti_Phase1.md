@@ -48,7 +48,7 @@
 | **F-02** | 🔴 **High** | **Ikärajan Valvonnan Ohitus** | Järjestelmä antaa alaikäisen käyttäjän rekisteröityä ja tehdä onnistuneesti resurssivarauksen, rikkoen 15 vuoden ikärajavaatimuksen. | **Todiste:** (Kuvakaappaukset/Kuva 6.png) |
 | **F-03** | 🔴 **High** | **Salasanan Tallennus** | Salasanat tallennetaan tietokantaan **selväkielisenä (Plain Text)**.  | **Todiste:** (Kuvakaappaukset/Kuva 2.png) |
 | **F-04** | 🟠 **Medium** | **SQL-Injektio (Tekninen virhe)** | \[Kuvaa lyhyesti SQLi-testin tulos, jos aiheutti teknisen virheen tai jos salasana ei ollut hashattu.] | \[Linkki tai kuva todisteesta] |
-| **F-05** | 🔵 **Info** | **XSS-Suodatus (Positiivinen)** | Järjestelmä suodatti onnistuneesti `<` ja `>` -merkit sähköpostikentästä, mikä estää helpot XSS-injektiot. | Näyttökuva syötteen hylkäämisestä. |
+| **F-05** | 🔵 **Info** | **XSS-Suodatus (Positiivinen)** | Järjestelmä suodatti onnistuneesti `<` ja `>` -merkit sähköpostikentästä, mikä estää helpot XSS-injektiot. | (Kuvakaappaukset/Kuva 4.png) |
 
 ***
 
@@ -69,6 +69,7 @@
 
 ```markdown
 ![Kuvan Kuvaus](Kuvakaappaukset/tiedoston_nimi.png)
+
 
 
 
