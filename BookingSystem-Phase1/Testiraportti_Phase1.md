@@ -21,8 +21,8 @@
 | :--- | :--- |
 | **Short summary** | Järjestelmässä havaittiin kriittisiä puutteita roolienhallinnassa ja liiketoimintalogiikassa, joiden avulla hyökkääjä voi saada ylläpitäjän oikeudet ja ohittaa alaikäisten varauskiellon. |
 | **Overall risk level** | **Critical** |
-| **Top 5 immediate actions** | 1. **Kiireellinen** korjaus oikeuksien korotukseen. |
-| | 2. **Kiireellinen** korjaus ikärajan valvontaan (backend-validointi). |
+| **Top 5 immediate actions** | 1. **Kiireellinen** korjaus salasanan tallenukseen. |
+| | 2. **Kiireellinen** korjaus ikärajan valvontaan. |
 | | 3. Varmista, että salasanat on **piilotettu**. |
 | | 4. Implementoi vahva roolien ja käyttöoikeuksien tarkistus sovelluslogiikassa. |
 | | 5. Korjaa havaitut tekniset viat (esim. ZAP-raportista). |
@@ -44,11 +44,11 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 | :--- | :--- | :--- | :--- | :--- |
-| **F-01** | 🔴 **High** | **Oikeuksien Korotus (Privilege Escalation)** | Käyttäjän rooli on mahdollista muuttaa (`reserver` -> `Admin`) suoraan PostgreSQL-tietokantaan. Sovellus ei estä luvatonta muutosta. | **SQL Komento:** `UPDATE booking_users SET role = 'Admin' WHERE [oikea\_tunniste] = 'seppo@kerava.com';` **Todiste:** [Kuva: Admin-näkymän näyttökuva] |
-| **F-02** | 🔴 **High** | **Ikärajan Valvonnan Ohitus** | Järjestelmä antaa alaikäisen käyttäjän rekisteröityä ja tehdä onnistuneesti resurssivarauksen, rikkoen 15 vuoden ikärajavaatimuksen. | **Todiste:** ![Näyttökuva alle 15-vuotiaan rekisteröinnistä ja varauksesta](Kuvakaappaukset/Kuva 6.png) |
-| **F-03** | 🔴 **High** | **Salasanan Tallennus** | Salasanat tallennetaan tietokantaan **selväkielisenä (Plain Text)**. (Täytä, jos näin oli) | **Todiste:** [Kuva: SELECT \* FROM booking\_users -kyselyn tulos] |
-| **F-04** | 🟠 **Medium** | **SQL-Injektio (Tekninen virhe)** | \[Kuvaa lyhyesti SQLi-testin tulos, jos aiheutti teknisen virheen tai jos salasana ei ollut hashattu.] | \[Linkki tai kuva todisteesta] |
-| **F-05** | 🔵 **Info** | **XSS-Suodatus (Positiivinen)** | Järjestelmä suodatti onnistuneesti `<` ja `>` -merkit sähköpostikentästä, mikä estää helpot XSS-injektiot. | Näyttökuva syötteen hylkäämisestä. |
+| **F-01** | **🟡 Low**  | **Oikeuksien Korotus (Privilege Escalation)** | Tietokantatason CHECK constraint esti luvattoman roolin (Admin) asettamisen SQL-päivityksellä, mikä lisäsi suojausta suoria tietokantahyökkäyksiä vastaan | **Todiste:** (Kuvakaappaukset/Kuva 8.png) |
+| **F-02** | 🔴 **High** | **Ikärajan Valvonnan Ohitus** | Järjestelmä antaa alaikäisen käyttäjän rekisteröityä ja tehdä onnistuneesti resurssivarauksen, rikkoen 15 vuoden ikärajavaatimuksen. | **Todiste:** (Kuvakaappaukset/Kuva 6.png) |
+| **F-03** | 🔴 **High** | **Salasanan Tallennus** | Salasanat tallennetaan tietokantaan **selväkielisenä**.  | **Todiste:** (Kuvakaappaukset/Kuva 2.png) |
+| **F-04** | 🟠 **Medium** | **SQL-Injektio (Tekninen virhe)** | Erikoismerkit rekisteröinnin yhteydessä aiheutti teknisen virheen | (Kuvakaappaukset/Kuva 1.png) |
+| **F-05** | 🔵 **Info** | **XSS-Suodatus (Positiivinen)** | Järjestelmä suodatti onnistuneesti `<` ja `>` -merkit sähköpostikentästä, mikä estää helpot XSS-injektiot. | (Kuvakaappaukset/Kuva 4.png) |
 
 ***
 
@@ -69,6 +69,14 @@
 
 ```markdown
 ![Kuvan Kuvaus](Kuvakaappaukset/tiedoston_nimi.png)
+
+
+
+
+
+
+
+
 
 
 
