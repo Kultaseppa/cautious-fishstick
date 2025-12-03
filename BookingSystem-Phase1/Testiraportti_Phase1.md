@@ -4,13 +4,13 @@
 
 | Tunniste | Arvo |
 | :--- | :--- |
-| **Tester(s)** | **Name:** [Oma Nimesi] |
+| **Tester(s)** | **Name:** Arttu Ronkainen |
 | **Purpose** | Tunnistaa tietoturva- ja liiketoimintalogiikan haavoittuvuudet rekisteröinti- ja tunnistautumisprosesseissa. |
 | **Scope (Tested components)** | Käyttäjän luonti, roolin määritys ja ikärajan (15v) valvonta. |
 | **Exclusions** | Resurssien varauslogiikka (paitsi ikärajatarkistus). |
 | **Test approach** | **Gray-box** |
-| **Test environment & dates** | **Start:** [Päivämäärä] **End:** [Päivämäärä] |
-| **Test environment details** | Docker (Web-sovellus, PostgreSQL), [Käytetty selain]. |
+| **Test environment & dates** | **Start:** 02.12.2025 **End:** 03.12.2025 |
+| **Test environment details** | Docker (Web-sovellus, PostgreSQL), Google Chrome. |
 | **Assumptions & constraints** | Pääsy tietokantaan (`psql`) oli käytettävissä tulosten vahvistamiseen. |
 
 ***
@@ -69,3 +69,4 @@
 
 ```markdown
 ![Kuvan Kuvaus](Kuvakaappaukset/tiedoston_nimi.png)
+
